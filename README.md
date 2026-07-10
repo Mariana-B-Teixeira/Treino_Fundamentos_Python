@@ -21,6 +21,6 @@ Consolidar os fundamentos da programação em Python através da prática, desen
 
 ## 🚀 Tecnologias
 
-- Python 3
+- Python
 
 ⭐ Desenvolvido por **Mariana B. Teixeira**
