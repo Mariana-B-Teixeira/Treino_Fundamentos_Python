@@ -97,3 +97,6 @@ Todas as soluções foram desenvolvidas por mim durante a realização do curso,
 >
 > **🇧🇷 Tradução:**  
 > *"Programar não é sobre digitar código. É sobre pensar."*
+
+---
+⭐ **Desenvolvido por Mariana B. Teixeira**
