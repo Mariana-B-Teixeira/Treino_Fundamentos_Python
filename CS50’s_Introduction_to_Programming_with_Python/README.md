@@ -31,8 +31,8 @@ Este repositório tem como objetivo registrar minha evolução durante o curso e
 | Semana | Conteúdo | Status |
 |:------:|----------|:------:|
 | 0 | Funções e Variáveis | ✅ |
-| 1 | Condicionais | ⬜ |
-| 2 | Laços de Repetição | ⬜ |
+| 1 | Condicionais | ✅ |
+| 2 | Laços de Repetição | ✅ |
 | 3 | Exceções | ⬜ |
 | 4 | Bibliotecas | ⬜ |
 | 5 | Testes Unitários | ⬜ |
