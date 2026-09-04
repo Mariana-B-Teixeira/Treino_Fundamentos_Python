@@ -1,9 +1,9 @@
 def main():
-    # Prompts the user for a fraction that indicates how much fuel is in a tank.
+    # Solicita ao usuário uma fração que indica quanto combustível há no tanque.
     f = input()
     percentage = convert(f)
 
-    # Outputs, as a percentage rounded to the nearest integer, how much fuel is in the tank
+    # Exibe, como uma porcentagem arredondada para o inteiro mais próximo, quanto combustível há no tanque
     print(gauge(percentage))
 
 def convert(fraction):
@@ -12,6 +12,7 @@ def convert(fraction):
     x = int(x)
     y = int(y)
 
+    # Erros de cálculo.
     if y == 0:
         raise ZeroDivisionError
 
@@ -19,14 +20,15 @@ def convert(fraction):
         raise ValueError
 
     else:
+        # Arredonda e passa o valor para uma porcentagem (%)
         return round((x / y) * 100)
 
 def gauge(percentage):
-  # If, though, 1% or less remains, output E instead to indicate that the tank is essentially empty.
+  # Se, no entanto, restar 1% ou menos, exibe E para indicar que o tanque está vazio.
     if percentage <= 1:
         return "E"
 
-    # And if 99% or more remains, output F instead to indicate that the tank is essentially full.
+    # E se restar 99% ou mais, exibe F para indicar que o tanque está cheio.
     elif percentage >= 99:
         return "F"
 
