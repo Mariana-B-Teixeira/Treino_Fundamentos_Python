@@ -1,5 +1,6 @@
 from plates import is_valid
 
+# Testa função do módulo plates.
 def test_Valid():
     assert is_valid("CS") == True
     assert is_valid("CS50") == True
