@@ -33,9 +33,9 @@ Este repositório tem como objetivo registrar minha evolução durante o curso e
 | 0 | Funções e Variáveis | ✅ |
 | 1 | Condicionais | ✅ |
 | 2 | Laços de Repetição | ✅ |
-| 3 | Exceções | ⬜ |
-| 4 | Bibliotecas | ⬜ |
-| 5 | Testes Unitários | ⬜ |
+| 3 | Exceções | ✅ |
+| 4 | Bibliotecas | ✅ |
+| 5 | Testes Unitários | ✅ |
 | 6 | Entrada e Saída de Arquivos (File I/O) | ⬜ |
 | 7 | Expressões Regulares | ⬜ |
 | 8 | Programação Orientada a Objetos | ⬜ |
