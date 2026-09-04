@@ -1,5 +1,6 @@
 from bank import value
 
+#Testa as funções do módulo bank.
 def test_hello():
     assert value("hello") == 0
     assert value("HELLO") == 0
