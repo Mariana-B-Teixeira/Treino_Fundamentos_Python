@@ -16,5 +16,7 @@ def value(greeting):
     else:
         return 100
 
+
+# Garante que a função main só seja executada quando o arquivo for rodado diretamente.
 if __name__ == "__main__":
     main()
