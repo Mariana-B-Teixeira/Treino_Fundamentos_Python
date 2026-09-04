@@ -1,6 +1,7 @@
 import pytest
 import fuel
 
+# Testa as funções do módulo fuel.
 def test_convert_zero_division_error():
     with pytest.raises(ZeroDivisionError):
         fuel.convert("1/0")
