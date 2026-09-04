@@ -1,5 +1,6 @@
 from twttr import shorten
 
+# Testa função do módulo twttr.
 def test_default():
     assert shorten("") == ""
 
