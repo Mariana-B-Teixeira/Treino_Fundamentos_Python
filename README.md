@@ -2,6 +2,8 @@
 
 Repositório criado para registrar meus estudos iniciais em Python por meio de exercícios práticos desenvolvidos durante o aprendizado da linguagem.
 
+Contém exercícios do CS50, curso da Harvard University, e do SENAI.
+
 ## 📚 Conteúdos praticados
 
 - Variáveis e tipos de dados
