@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <!-- Conecta o nosso arquivo de estilo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📋 Lista de Tarefas</h1>
+        <p class="subtitulo">Suas tarefas ficam salvas no arquivo <code>tarefas.json</code></p>
+
+        <!-- 1. FORMULÁRIO PARA ADICIONAR TAREFA -->
+        <!-- Ao clicar em Adicionar, envia os dados para a rota /adicionar no Python -->
+        <form action="{{ url_for('adicionar') }}" method="POST" class="form-adicionar">
+            <input 
+                type="text" 
+                name="texto_tarefa" 
+                placeholder="Digite uma nova atividade..." 
+                required 
+                autocomplete="off"
+            >
+            <button type="submit" class="btn-adicionar">Adicionar</button>
+        </form>
+
+        <!-- 2. LISTA DE TAREFAS -->
+        <ul class="lista-tarefas">
+            {% for tarefa in tarefas %}
+                <!-- Se a tarefa estiver concluída, adiciona a classe CSS 'concluida', senão 'pendente' -->
+                <li class="item-tarefa {% if tarefa.concluida %}concluida{% else %}pendente{% endif %}">
+                    
+                    <div class="info-tarefa">
+                        <!-- Etiqueta visual de status -->
+                        {% if tarefa.concluida %}
+                            <span class="status-badge status-concluida">✔ Concluída</span>
+                        {% else %}
+                            <span class="status-badge status-pendente">⏳ Pendente</span>
+                        {% endif %}
+
+                        <span class="texto-tarefa">{{ tarefa.texto }}</span>
+                    </div>
+
+                    <div class="acoes">
+                        <!-- Botão para Concluir / Desmarcar -->
+                        <form action="{{ url_for('concluir', id_tarefa=tarefa.id) }}" method="POST">
+                            <button type="submit" class="btn-concluir" title="Marcar/Desmarcar como concluída">
+                                {% if tarefa.concluida %}↩️ Reabrir{% else %}✅ Concluir{% endif %}
+                            </button>
+                        </form>
+
+                        <!-- Botão para Remover -->
+                        <form action="{{ url_for('remover', id_tarefa=tarefa.id) }}" method="POST">
+                            <button type="submit" class="btn-remover" title="Excluir tarefa">
+                                🗑️ Excluir
+                            </button>
+                        </form>
+                    </div>
+
+                </li>
+            {% else %}
+                <li class="lista-vazia">Nenhuma tarefa por enquanto. Adicione uma acima! 🎉</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

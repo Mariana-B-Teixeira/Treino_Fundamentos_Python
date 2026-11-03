@@ -1,0 +1,195 @@
+/* Configurações gerais da página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* Cartão central branco */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Formulário de entrada */
+.form-adicionar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-adicionar input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-adicionar input:focus {
+    border-color: #3b82f6;
+}
+
+.btn-adicionar {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-adicionar:hover {
+    background-color: #2563eb;
+}
+
+/* Lista de tarefas */
+.lista-tarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-tarefa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #f59e0b; /* Barra lateral laranja para pendentes */
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.info-tarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+/* Etiquetas (Badges) de Status */
+.status-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.status-pendente {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.status-concluida {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.texto-tarefa {
+    font-size: 1rem;
+    color: #1e293b;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+/* Estilo para quando a tarefa está concluída */
+.item-tarefa.concluida {
+    background-color: #f0fdf4; /* Fundo verde bem suave */
+    border-color: #bbf7d0;
+    border-left: 6px solid #22c55e; /* Barra lateral verde para concluídas */
+}
+
+.item-tarefa.concluida .texto-tarefa {
+    text-decoration: line-through;
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* Muda a cor do botão quando a tarefa já foi concluída (botão Reabrir) */
+.item-tarefa.concluida .btn-concluir {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+/* Botões de ação (Concluir e Excluir) */
+.acoes {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-concluir, .btn-remover {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-concluir {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.btn-remover {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-concluir:hover, .btn-remover:hover {
+    opacity: 0.8;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+    font-style: italic;
+}

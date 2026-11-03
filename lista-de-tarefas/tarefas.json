@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "texto": "Aprender como o Python conversa com o HTML",
+        "concluida": false
+    },
+    {
+        "id": 2,
+        "texto": "Testar adicionar e concluir uma tarefa",
+        "concluida": true
+    }
+]
